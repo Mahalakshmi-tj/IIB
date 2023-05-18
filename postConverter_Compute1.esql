@@ -1,0 +1,25 @@
+
+
+CREATE COMPUTE MODULE postConverter_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE XMLInput Character;
+        DECLARE JSONInput CHARACTER;
+        
+SET XMLInput = COALESCE( CAST(ASBITSTREAM(InputRoot.XMLNSC CCSID 1208) as CHAR CCSID 1208), '');
+SET JSONInput = COALESCE( CAST(ASBITSTREAM(InputRoot.JSON.Data CCSID 1208) as CHAR CCSID 1208), '');
+
+if XMLInput <> '' then
+ SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+end if;
+
+if JSONInput <> '' then
+ SET OutputRoot.XMLNSC.Root = InputRoot.JSON.Data;
+end if;
+		
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;
