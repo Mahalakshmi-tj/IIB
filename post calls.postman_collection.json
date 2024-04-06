@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "7eb37c1d-ebba-4705-b3b3-dc8a93e1c6a4",
+		"name": "post calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hi\": \"wowww\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/convertwithheader/v1/transform",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Json",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Xml",
+						"value": "application/xml",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Conversion",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Root>\r\n    <employeedetails>\r\n        <name>anu</name>\r\n        <city>blr</city>\r\n        <ID>c1f9895b-f895-4f2e-8f87-26010a3d5e02</ID>\r\n    </employeedetails>\r\n</Root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/convertwithheader/v1/transform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"convertwithheader",
+						"v1",
+						"transform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7801/pin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"anu\",\r\n    \"city\" :\"blr\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7801/pin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7801",
+					"path": [
+						"pin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/jsontoblob/v1/jsonblob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hi\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/jsontoblob/v1/jsonblob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"jsontoblob",
+						"v1",
+						"jsonblob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/jsontoblob/v1/jsonblob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"vidya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/jsontoblob/v1/jsonblob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"jsontoblob",
+						"v1",
+						"jsonblob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/clienterror/v1/errors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Xml",
+						"value": "application/xml",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "1234",
+						"type": "default"
+					},
+					{
+						"key": "TEST",
+						"value": "404",
+						"type": "default"
+					},
+					{
+						"key": "TESTFIVE",
+						"value": "500",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Root>\r\n<name> maha </name>\r\n<age> 11 </age>\r\n</Root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/clienterror/v1/errors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"clienterror",
+						"v1",
+						"errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/servererror/v1/errorserver",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Xml",
+						"value": "application/xml",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "1234",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Root>\r\n<name>maha</name>\r\n<age>1</age>\r\n</Root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/servererror/v1/errorserver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"servererror",
+						"v1",
+						"errorserver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7801/facts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7801/facts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7801",
+					"path": [
+						"facts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/hello",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"user2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/hi?username=user1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7080/hi?username=user1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"hi"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "user1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7080/errorserver/v1/servererror",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Xml",
+						"value": "application/xml",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "x-api-key",
+						"value": "1234",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Root>\r\n<name>anu</name>\r\n<age>12</age>\r\n<Root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7080/errorserver/v1/servererror",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"errorserver",
+						"v1",
+						"servererror"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7801/activity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7801/activity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7801",
+					"path": [
+						"activity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
